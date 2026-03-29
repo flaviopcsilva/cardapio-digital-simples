@@ -22,25 +22,25 @@ export class App {
     {
       nome: 'Batata com Calabresa',
       descricao: 'Batata frita com calabresa, sabor irresistível',
-      preco: 18.00,
+      preco: 20.00,
       imagem: 'assets/produtos/batata-com-calabresa.jpg'
     },
     {
       nome: 'Batata com Frango',
-      descricao: 'Batata frita com Isca de Frango, sabor irresistível',
-      preco: 6.00,
+      descricao: 'Batata frita com  Frango Empanado, sabor irresistível',
+      preco: 30.00,
       imagem: 'assets/produtos/batata-frango.jpg'
     },
     {
-      nome: 'Isca de Frango',
-      descricao: 'Isca de Frango crocante e suculenta, perfeita para petiscar',
-      preco: 12.00,
+      nome: 'Frango Empanado',
+      descricao: 'Frango empanado crocante e suculento, perfeito para petiscar',
+      preco: 25.00,
       imagem: 'assets/produtos/frango.jpg'
     }
   ];
 
   pedir(produto: any) {
-    const numero = '5521974863278';
+    const numero = '5521920001798';
 
     const mensagem = `Olá, quero pedir:\n${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
 
