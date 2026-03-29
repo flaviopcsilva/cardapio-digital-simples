@@ -16,8 +16,8 @@
 }
 
 .header img {
-  width: 120px;
-  height: 120px;
+  width: 230px;
+  height: 230px;
   object-fit: cover;
   border-radius: 50%; /* deixa redonda */
   margin-bottom: 10px;
