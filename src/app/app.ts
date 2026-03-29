@@ -15,25 +15,25 @@ export class App {
   produtos = [
     {
       nome: 'Batata Simples',
-      descricao: 'Pão, carne, queijo e molho especial',
+      descricao: 'Batata frita simples, crocante e deliciosa',
       preco: 15.00,
       imagem: 'assets/produtos/batata-simples.jpg'
     },
     {
       nome: 'Batata com Calabresa',
-      descricao: 'Pão, carne, queijo, alface e tomate',
+      descricao: 'Batata frita com calabresa, sabor irresistível',
       preco: 18.00,
       imagem: 'assets/produtos/batata-com-calabresa.jpg'
     },
     {
       nome: 'Batata com Frango',
-      descricao: 'Lata 350ml',
+      descricao: 'Batata frita com Isca de Frango, sabor irresistível',
       preco: 6.00,
       imagem: 'assets/produtos/batata-frango.jpg'
     },
     {
       nome: 'Isca de Frango',
-      descricao: 'Porção média crocante',
+      descricao: 'Isca de Frango crocante e suculenta, perfeita para petiscar',
       preco: 12.00,
       imagem: 'assets/produtos/frango.jpg'
     }
