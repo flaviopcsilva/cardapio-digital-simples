@@ -28,6 +28,12 @@
   color: #333;
 }
 
+.lista h1 {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
 .item {
   display: flex;
   background: white;
