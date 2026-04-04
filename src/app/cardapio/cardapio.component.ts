@@ -62,6 +62,7 @@ export class CardapioComponent implements OnInit {
           this.mostrarNotificacao = true;
 
           this.tocarSom();
+          this.vibrar(); // 🔥 AQUI
 
           setTimeout(() => {
             this.mostrarNotificacao = false;
@@ -69,6 +70,12 @@ export class CardapioComponent implements OnInit {
         }
       });
     });
+  }
+
+  vibrar() {
+    if (navigator.vibrate) {
+      navigator.vibrate([200, 100, 200, 100, 400]);
+    }
   }
 
   tocarSom() {
