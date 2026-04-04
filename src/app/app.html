@@ -1,15 +1,17 @@
 <div class="container">
 
- <div class="header">
-  <img src="assets/logo.jpeg" alt="Logo da lanchonete">
-  <!-- <h1>{{ titulo }}</h1> -->
-</div>
+  <div class="header">
+    <img src="assets/logo.jpeg" alt="Logo">
+  </div>
 
+  <!-- MESA -->
+  <div class="mesa">
+    <input type="text" [(ngModel)]="mesa" placeholder="Número da mesa">
+  </div>
+
+  <!-- PRODUTOS -->
   <div class="lista">
-    
-     <h1>Aguardem novos eventos, em breve teremos novidades!</h1>
-    
-    <!-- <div class="item" *ngFor="let produto of produtos">
+    <div class="item" *ngFor="let produto of produtos">
 
       <img [src]="produto.imagem">
 
@@ -18,13 +20,30 @@
         <p>{{ produto.descricao }}</p>
         <span>R$ {{ produto.preco.toFixed(2) }}</span>
 
-        <button (click)="pedir(produto)">
-          Pedir no WhatsApp
+        <button (click)="adicionar(produto)">
+          Adicionar
         </button>
       </div>
 
+    </div>
+  </div>
 
-    </div> -->
+  <!-- CARRINHO -->
+  <div class="carrinho" *ngIf="carrinho.length > 0">
+
+    <h2>🛒 Seu Pedido</h2>
+
+    <div *ngFor="let item of carrinho; let i = index">
+      {{ item.nome }} - R$ {{ item.preco.toFixed(2) }}
+      <button (click)="remover(i)">❌</button>
+    </div>
+
+    <h3>Total: R$ {{ total.toFixed(2) }}</h3>
+
+    <button class="finalizar" (click)="enviarPedido()">
+      Enviar Pedido
+    </button>
+
   </div>
 
 </div>

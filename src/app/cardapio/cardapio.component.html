@@ -1,0 +1,45 @@
+<div class="notificacao" *ngIf="mostrarNotificacao">🔔 {{ notificacao }}</div>
+<div class="container">
+  <div class="header">
+    <img src="assets/logo.png" />
+    <h1>{{ titulo }}</h1>
+  </div>
+
+  <!-- IDENTIFICAÇÃO -->
+
+  <div class="topo">
+    <input type="text" placeholder="Mesa" [(ngModel)]="mesa" />
+    <input type="text" placeholder="Garçom" [(ngModel)]="garcom" />
+  </div>
+
+  <!-- PRODUTOS -->
+  <div class="lista">
+    <h1>Cardápio</h1>
+
+    <div class="item" *ngFor="let produto of produtos">
+      <img [src]="produto.imagem" />
+
+      <div class="info">
+        <h3>{{ produto.nome }}</h3>
+        <p>{{ produto.descricao }}</p>
+        <strong>R$ {{ produto.preco }}</strong>
+
+        <button (click)="adicionar(produto)">Adicionar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARRINHO -->
+  <div class="carrinho">
+    <h2>Pedido</h2>
+
+    <div *ngFor="let item of carrinho; let i = index">
+      {{ item.nome }} - R$ {{ item.preco }}
+      <button (click)="remover(i)">❌</button>
+    </div>
+
+    <h3>Total: R$ {{ total }}</h3>
+
+    <button class="enviar" (click)="enviarPedido()">Enviar Pedido 🚀</button>
+  </div>
+</div>

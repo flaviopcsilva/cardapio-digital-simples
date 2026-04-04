@@ -1,0 +1,39 @@
+<div class="container">
+  
+
+  <h1>👨‍🍳 Painel da Cozinha</h1>
+
+  <button (click)="ativarSom()" class="btn-som">
+    🔊 Ativar Som
+  </button>
+
+  <div *ngFor="let pedido of pedidos; let i = index"
+       class="pedido"
+       [ngClass]="{
+         'novo': pedido.novo,
+         'preparando': pedido.status === 'preparando',
+         'pronto': pedido.status === 'pronto'
+       }">
+
+    <div class="topo">
+      <h2>Mesa {{ pedido.mesa }} - {{ pedido.garcom }}</h2>
+      <span class="status">{{ pedido.status }}</span>
+    </div>
+
+    <ul>
+      <li *ngFor="let item of pedido.itens">
+        {{ item.nome }} - R$ {{ item.preco }}
+      </li>
+    </ul>
+
+    <strong>Total: R$ {{ pedido.total }}</strong>
+
+    <div class="acoes">
+      <button (click)="preparar(pedido)">👨‍🍳 Preparando</button>
+      <button (click)="pronto(pedido)">✅ Pronto</button>
+      <button (click)="remover(i)">❌ Remover</button>
+    </div>
+
+  </div>
+
+</div>
