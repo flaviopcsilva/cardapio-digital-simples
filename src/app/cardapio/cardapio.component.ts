@@ -114,7 +114,7 @@ export class CardapioComponent implements OnInit {
       total: this.total,
     };
 
-    await fetch('https://cardapio-backend-6uc6.onrender.com', {
+    await fetch('https://cardapio-backend-6uc6.onrender.com/pedido', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(pedido),
