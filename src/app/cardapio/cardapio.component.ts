@@ -52,7 +52,7 @@ export class CardapioComponent implements OnInit {
   ];
 
   ngOnInit() {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('https://cardapio-backend-6uc6.onrender.com');
 
     this.socket.on('pedido-pronto', (data: any) => {
       this.zone.run(() => {
@@ -114,7 +114,7 @@ export class CardapioComponent implements OnInit {
       total: this.total,
     };
 
-    await fetch('http://localhost:3000/pedido', {
+    await fetch('https://cardapio-backend-6uc6.onrender.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(pedido),
